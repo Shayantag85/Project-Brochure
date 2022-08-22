@@ -1,0 +1,158 @@
+/*
+================
+ Shayan 
+================ 
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+
+/* Roots */
+
+:root{
+    --primary-clr:#fff;
+    --primary-clr2:#222;
+    --font-poppins:"poppins";
+    --font-montserrat:"montserrat";
+    --spacing: 1px;
+    --width: 100%;
+    --height: 100%;
+}
+/* Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* Global Styling */
+
+.bg-img{
+    background: url(./img/anime-landscape-for-desktop-scenery-clouds-stars-buildings-wallpaper.jpg) center center/cover;
+    height: 100vh;
+}
+
+.bg-img::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--width);
+    background: rgba(255, 255, 255, 0.174);
+}
+
+.content{
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    text-align: center;
+    padding: 60px 32px;
+    width: 370px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.133);
+    border: 1px solid var(--primary-clr);
+    backdrop-filter: blur(32px);
+    box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
+}
+/* login header */
+.content header{
+    color: var(--primary-clr);
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 0 35px 0;
+    font-family: var(--font-montserrat), sans-serif;
+}
+/* login fields */
+.field{
+    position: relative;
+    height: 45px;
+    width: var(--width);
+    display: flex;
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.field span{
+    color: var(--primary-clr2);
+    width: 40px;
+    line-height: 45px;
+}
+
+.field input{
+    height: var(--height);
+    width: var(--width);
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--primary-clr2);
+    font-size: 16px;
+    font-family: var(--font-poppins), sans-serif;
+}
+
+.space{
+    margin-top: 16px;
+}
+/* pass show */
+.show{
+    position: absolute;
+    right: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-clr2);
+    display: none;
+    cursor: pointer;
+    font-family: var(--font-montserrat) , sans-serif;
+}
+
+.pass-key:valid~.show{
+    display: block;
+}
+/* forgot password */
+.pass{
+    text-align: left;
+    margin: 10px 0;
+}
+
+.pass a{
+    color: var(--primary-clr);
+    text-decoration: none;
+    font-family: var(--font-poppins), sans-serif;
+}
+
+.pass:hover{
+    text-decoration: underline;
+}
+/* login button */
+.field input[type="submit"]{
+    background: #682efc;
+    border: 1px solid #7741fd;
+    color: var(--primary-clr);
+    font-size: 18px;
+    letter-spacing: var(--spacing);
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-montserrat), sans-serif;
+    transition: 0.3s ease;
+}
+
+.field input[type="submit"]:hover{
+    background: #4a0de4f5;
+}
+
+.login{
+    color: var(--primary-clr);
+    margin: 20px 0;
+    font-family: var(--font-poppins), sans-serif;
+}
+
+i span{
+    margin-left: 8px;
+    font-weight: 500;
+    letter-spacing: var(--spacing);
+    font-size: 16px;
+    font-family: var(--font-poppins), sans-serif;
+}
